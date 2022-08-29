@@ -19,7 +19,7 @@ return (
     
     <div>
         <h1>Top Movies & TV Shows</h1>
-        <button type="button" className="btn btn-outline-primary btn-lg" onClick={(e) => makeRequest(e.target.value)}>Most Popular TV & Movies </button>
+        <button type="button" className="btn btn-outline-dark" onClick={(e) => makeRequest(e.target.value)}>Most Popular TV & Movies </button>
 
         {data.map((movie, index) => (
                 <div  key={index} className="container text-center  movie-container">

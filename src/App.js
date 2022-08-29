@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
   
 import Trending from "./Trending"
 import './App.css';
@@ -27,10 +27,11 @@ const App = () => {
            <div>
 
             <Routes>
-                <Route exact path="/trends" element={<Trending />}></Route>
+                <Route exact path="trends" element={<Trending />}></Route>
             </Routes>
             <h1>Top Movies In the World Right Now</h1>
-            <button type="button"  className="btn btn-outline-primary btn-lg" onClick={(e) => makeRequest(e)}>Click For Popular Movies</button>
+            <button type="button"  className="btn btn-primary " onClick={(e) => makeRequest(e)}>Click For Popular Movies</button>
+           <Link to="trends"> <button type="button" className="btn btn-warning ">Click Here for Hot Movies & TV Shows</button></Link>
 
             {data.map((movie, index) => (
                 <div  key={index} className="container text-center  movie-container">
