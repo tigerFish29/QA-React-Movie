@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
 import { Routes, Route } from "react-router-dom"
+  
 import Trending from "./Trending"
 import './App.css';
 
@@ -20,15 +21,15 @@ const App = () => {
     };
 
     return (
-           
 
-        <>
-           <div className="App">
-               <Routes>
-                   <Route path="/Trending" element={ <Trending />}></Route>
-               </Routes>
-           </div>
-            
+           
+    
+           <div>
+
+            <Routes>
+                <Route exact path="/trends" element={<Trending />}></Route>
+            </Routes>
+            <h1>Top Movies In the World Right Now</h1>
             <button type="button"  className="btn btn-outline-primary btn-lg" onClick={(e) => makeRequest(e)}>Click For Popular Movies</button>
 
             {data.map((movie, index) => (
@@ -48,8 +49,9 @@ const App = () => {
 
                 </div>
             ))}
-
-        </>
+            </div>
+      
+        
     );
 }
 
