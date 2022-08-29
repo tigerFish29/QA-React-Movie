@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started Movie React app
 
 A simple movie app using React. I created this app for my own personal learning. The application 
 is still work in progress
